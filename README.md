@@ -6,9 +6,17 @@ canonical source so each supported editor can share the same visual language.
 
 ## Screenshots
 
+### Neovim
+
 <p align="center">
   <img src="assets/screenshots/nvim-python.png" alt="Black Ember in Neovim editing Python" width="49%" />
   <img src="assets/screenshots/nvim-rust.png" alt="Black Ember in Neovim editing Rust" width="49%" />
+</p>
+
+### Visual Studio Code
+
+<p align="center">
+  <img src="assets/screenshots/vscode-python.png" alt="Black Ember in Visual Studio Code editing Python" width="100%" />
 </p>
 
 ## Available themes
