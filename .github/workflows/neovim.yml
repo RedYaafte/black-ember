@@ -1,0 +1,41 @@
+name: Validate Neovim theme
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Load Black Ember in Neovim
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install stable Neovim
+        run: |
+          curl --fail --location --silent --show-error \
+            --output "$RUNNER_TEMP/nvim.tar.gz" \
+            https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+          tar -xzf "$RUNNER_TEMP/nvim.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/nvim-linux-x86_64/bin" >> "$GITHUB_PATH"
+
+      - name: Validate canonical palette
+        run: |
+          python3 -c 'import tomllib; tomllib.load(open("palette/black-ember.toml", "rb"))'
+
+      - name: Load colorscheme headlessly
+        run: |
+          nvim --headless -u NONE -i NONE \
+            --cmd "set rtp+=$GITHUB_WORKSPACE" \
+            '+runtime plugin/black-ember.lua' \
+            '+colorscheme black-ember' \
+            '+lua assert(vim.g.colors_name == "black-ember")' \
+            '+lua assert(vim.api.nvim_get_hl(0, { name = "Normal" }).fg ~= nil)' \
+            '+lua assert(vim.api.nvim_get_hl(0, { name = "DiagnosticError" }).fg ~= nil)' \
+            '+qa!'
