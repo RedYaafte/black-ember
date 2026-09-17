@@ -1,0 +1,45 @@
+-- Runtime palette for Neovim. It mirrors palette/black-ember.toml.
+return {
+  ui = {
+    background = "#171614",
+    background_deep = "#11100f",
+    surface = "#35312c",
+    overlay = "#625a50",
+    foreground = "#e8dfd0",
+    foreground_bright = "#fff7eb",
+    muted = "#a69a8b",
+    border = "#35312c",
+    selection = "#625a50",
+    cursor = "#e2a35f",
+    accent = "#bd8857",
+    accent_secondary = "#e2a35f",
+  },
+  syntax = {
+    comment = "#a69a8b",
+    keyword = "#bd8857",
+    function_ = "#e2a35f",
+    string = "#9caa76",
+    constant = "#e7bd72",
+    type = "#8da39a",
+    variable = "#e8dfd0",
+    property = "#d3a16e",
+    number = "#e7bd72",
+    operator = "#aaa094",
+    punctuation = "#8b8176",
+  },
+  diagnostic = {
+    error = "#bd5548",
+    warning = "#e7bd72",
+    info = "#8da39a",
+    hint = "#9caa76",
+  },
+  vcs = {
+    added = "#9caa76",
+    modified = "#e7bd72",
+    removed = "#bd5548",
+  },
+  terminal = {
+    normal = { "#171614", "#bd5548", "#9caa76", "#e7bd72", "#8b8176", "#bd8857", "#8da39a", "#e8dfd0" },
+    bright = { "#625a50", "#d86453", "#b4c285", "#f0ca7a", "#aaa094", "#d3a16e", "#9eb6ac", "#fff7eb" },
+  },
+}
