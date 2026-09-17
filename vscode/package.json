@@ -1,0 +1,44 @@
+{
+  "name": "black-ember",
+  "displayName": "Black Ember",
+  "description": "A warm, low-glare dark theme with charcoal surfaces and restrained ember highlights.",
+  "version": "0.1.0",
+  "publisher": "redyaafte",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RedYaafte/black-ember.git"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#171614",
+    "theme": "dark"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "black ember",
+    "dark theme",
+    "warm",
+    "charcoal",
+    "bronze",
+    "neovim"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Black Ember",
+        "uiTheme": "vs-dark",
+        "path": "./themes/black-ember-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "generate": "python3 ../scripts/generate_themes.py",
+    "test": "python3 ../scripts/generate_themes.py --check"
+  }
+}

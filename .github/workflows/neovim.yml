@@ -1,4 +1,4 @@
-name: Validate Neovim theme
+name: Validate theme artifacts
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   validate:
-    name: Load Black Ember in Neovim
+    name: Validate Black Ember
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +25,14 @@ jobs:
           tar -xzf "$RUNNER_TEMP/nvim.tar.gz" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/nvim-linux-x86_64/bin" >> "$GITHUB_PATH"
 
-      - name: Validate canonical palette
+      - name: Validate generated theme artifacts
         run: |
-          python3 -c 'import tomllib; tomllib.load(open("palette/black-ember.toml", "rb"))'
+          python3 scripts/generate_themes.py --check
+
+      - name: Validate Visual Studio Code extension manifests
+        run: |
+          python3 -m json.tool vscode/package.json > /dev/null
+          python3 -m json.tool vscode/themes/black-ember-color-theme.json > /dev/null
 
       - name: Load colorscheme headlessly
         run: |

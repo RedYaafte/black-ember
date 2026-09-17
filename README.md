@@ -13,7 +13,8 @@ canonical source so each supported editor can share the same visual language.
 
 ## Available themes
 
-- Neovim
+- Neovim — available
+- Visual Studio Code — in development
 
 ## Neovim
 
