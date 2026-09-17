@@ -4,6 +4,13 @@ Black Ember is a warm, low-glare dark theme built around charcoal surfaces,
 aged bronze, and restrained ember highlights. Its palette lives in one
 canonical source so each supported editor can share the same visual language.
 
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/nvim-python.png" alt="Black Ember in Neovim editing Python" width="49%" />
+  <img src="assets/screenshots/nvim-rust.png" alt="Black Ember in Neovim editing Rust" width="49%" />
+</p>
+
 ## Available themes
 
 - Neovim
