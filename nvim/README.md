@@ -9,7 +9,7 @@ With `lazy.nvim`:
 
 ```lua
 {
-  "yafte/black-ember",
+  "RedYaafte/black-ember",
   name = "black-ember",
   priority = 1000,
   config = function()

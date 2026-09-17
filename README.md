@@ -18,7 +18,7 @@ and `nvim-cmp`.
 
 ```lua
 {
-  "yafte/black-ember",
+  "RedYaafte/black-ember",
   name = "black-ember",
   lazy = false,
   priority = 1000,
@@ -35,7 +35,7 @@ and `nvim-cmp`.
 ### Install with Neovim packages
 
 ```sh
-git clone https://github.com/yafte/black-ember \
+git clone https://github.com/RedYaafte/black-ember \
   ~/.local/share/nvim/site/pack/black-ember/start/black-ember
 ```
 
@@ -60,3 +60,7 @@ require("black-ember").setup({
 [`palette/black-ember.toml`](palette/black-ember.toml) is the canonical color
 definition. Editor implementations should map their native highlight tokens to
 its semantic roles instead of introducing unrelated colors.
+
+## License
+
+[MIT](LICENSE)
