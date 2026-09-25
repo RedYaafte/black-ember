@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/black-ember-header.png" alt="Black Ember" width="100%" />
+</p>
+
 # Black Ember
 
 Black Ember is a warm, low-glare dark theme built around charcoal surfaces,
